@@ -109,7 +109,7 @@ Switch to feature-branch, and merge changes from main-branch
 
 ```sh
 git checkout feature/initial-updates
-git merge master
+git merge main
 ```
 
 ## Merge changes to main-branch
