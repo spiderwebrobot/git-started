@@ -67,48 +67,63 @@ Specify how to reconcile divergent branches
 git config pull.rebase false
 ```
 
+Establish your identity
+
+```sh
+git config user.name "Your Name"
+git config user.email your@address.com
+```
+
 ## Create a feature-branch
 
-Get the latest changes from the `main` branch
+Get the latest changes from the main-branch
 
-```
+```sh
 git checkout main
 git pull
 ```
 
-Switch to a feature-branch
+Create and switch to a feature-branch
 
-```
+```sh
 git checkout -b feature/initial-updates
 ```
 
-## Merge changes to `main` branch
-
-Add and commit changes
+## Add and commit feature-branch changes
 
 ```sh
 git add .
 git commit
 ```
 
-Switch back to `main` branch to get latest changes again
+## Sync feature-branch with main-branch
 
-```
+Switch to main-branch to get latest changes
+
+```sh
 git checkout main
 git pull
 ```
 
-Switch back to feature-branch to merge in changes from `main` branch
+Switch to feature-branch, and merge changes from main-branch
 
-```
+```sh
 git checkout feature/initial-updates
 git merge master
 ```
 
-Switch back to `main` branch to merge feature-branch
+## Merge changes to main-branch
 
-```
+Switch to main-branch, and merge changes from feature-branch
+
+```sh
 git checkout main
 git pull
 git merge feature/initial-updates
+```
+
+## Publish changes
+
+```sh
+git push
 ```
