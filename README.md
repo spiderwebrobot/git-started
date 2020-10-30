@@ -118,21 +118,26 @@ git checkout feature/initial-updates
 git merge main
 ```
 
-### Merge the feature-branch changes into the main-branch
+### Create pull-request for the feature-branch
 
-Switch to main-branch, and merge changes from feature-branch
-
-```sh
-git checkout main
-git pull
-git merge feature/initial-updates
-```
-
-### Publish changes
+Make sure the feature-branch changes are in sync with the main-branch before proceeding (see instructions above)
 
 ```sh
-git push
+git push --set-upstream origin feature/initial-updates
 ```
+
+1. Copy and paste the pull-request URL into browser `https://github.com/[user]/[repository]/pull/new/feature/initial-updates`
+2. I think something goes here?...
+3. Navigate to the newly created pull-request e.g. `https://github.com/[user]/[repository]/pull/1`
+
+### Publish the feature-branch changes
+
+Merge the feature-branch changes into the main-branch
+
+1. Select "Squash and merge" from the "Merge pull request" dropdown menu
+2. Click on the "Squash and merge" button
+3. Click on the "Confirm squash and merge" button
+4. Click on the "Delete branch" button
 
 ## Resources
 
