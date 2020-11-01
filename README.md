@@ -87,6 +87,12 @@ Specify how to reconcile divergent branches
 git config pull.rebase false
 ```
 
+Push the current branch to update a branch with the same name
+
+```sh
+git config push.default current
+```
+
 Establish your identity
 
 ```sh
@@ -137,13 +143,13 @@ Push the feature-branch changes
 
 1. Open a terminal
 2. Make sure the feature-branch changes are in sync with the main-branch (see instructions above)
-3. Push the feature-branch `git push --set-upstream origin feature/initial-updates`
+3. Push the feature-branch `git push`
 
 After pushing the feature-branch...
 
 1. Open a browser
-2. Navigate to the repository's branches, e.g. `https://github.com/spiderwebrobot/git-started/branches/all`
-3. TODO: something happens here...
+2. Navigate to the "Your branches" page, e.g. `https://github.com/spiderwebrobot/git-started/branches/yours`
+3. On the "Your branches" page, click on the respective "New pull request" button
 4. On the "Open a pull request" page, click on the "Create pull request" button
 
 ### Deploy the feature-branch changes
@@ -151,11 +157,12 @@ After pushing the feature-branch...
 Merge the feature-branch changes into the main-branch
 
 1. Open a browser
-2. Navigate to the newly created pull-request e.g. `https://github.com/spiderwebrobot/git-started/pull/1`
-3. Select "Squash and merge" from the "Merge pull request" dropdown menu (if not already selected)
-4. Click on the "Squash and merge" button
-5. Click on the "Confirm squash and merge" button
-6. Click on the "Delete branch" button
+2. Navigate to the "Pull requests" page, e.g. `https://github.com/spiderwebrobot/git-started/pulls`
+3. TODO: something here
+4. Select "Squash and merge" from the "Merge pull request" dropdown menu (if not already selected)
+5. Click on the "Squash and merge" button
+6. Click on the "Confirm squash and merge" button
+7. Click on the "Delete branch" button
 
 ## Resources
 
