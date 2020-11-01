@@ -72,13 +72,13 @@ kill 10164 # or whatever `Agent pid` that was generated
 Open a terminal and...
 
 ```sh
-git clone git@github.com:[user]/[repository].git
+git clone git@github.com:[user]/[repository].git # e.g. git clone git@github.com:spiderwebrobot/git-started.git
 ```
 
 Navigate into the repository
 
 ```sh
-cd [repository]
+cd [repository] # e.g. cd git-started
 ```
 
 Specify how to reconcile divergent branches
@@ -139,18 +139,19 @@ Push the feature-branch changes
 2. Make sure the feature-branch changes are in sync with the main-branch (see instructions above)
 3. Push the feature-branch `git push --set-upstream origin feature/initial-updates`
 
-After pushing the feature-branch, a pull-request URL will be generated
+After pushing the feature-branch...
 
 1. Open a browser
-2. Copy and paste the pull-request URL into the browser, e.g. `https://github.com/[user]/[repository]/pull/new/feature/initial-updates`
-3. On the "Open a pull request" page, click on the "Create pull request" button
+2. Navigate to the repository's branches, e.g. `https://github.com/spiderwebrobot/git-started/branches/all`
+3. TODO: something happens here...
+4. On the "Open a pull request" page, click on the "Create pull request" button
 
 ### Deploy the feature-branch changes
 
 Merge the feature-branch changes into the main-branch
 
 1. Open a browser
-2. Navigate to the newly created pull-request e.g. `https://github.com/[user]/[repository]/pull/1`
+2. Navigate to the newly created pull-request e.g. `https://github.com/spiderwebrobot/git-started/pull/1`
 3. Select "Squash and merge" from the "Merge pull request" dropdown menu (if not already selected)
 4. Click on the "Squash and merge" button
 5. Click on the "Confirm squash and merge" button
@@ -162,3 +163,4 @@ Merge the feature-branch changes into the main-branch
 * [Adding a new SSH key to your GitHub account](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 * [GitHub Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+* [Git: How to configure git to push only your current branch](https://makandracards.com/makandra/8039-git-how-to-configure-git-to-push-only-your-current-branch)
