@@ -3,6 +3,7 @@
 * [Prerequisites](#prerequisites)
 * [Repository setup](#repository-setup)
 * [Workflow](#workflow)
+* [Deployment](#deployment)
 * [Resources](#resources)
 
 ## Prerequisites
@@ -58,19 +59,20 @@
 
 ### Clone and configure the repository
 
-1. Open a terminal and...
+1. Open a terminal
+2. Clone the repository
    ```sh
    git clone git@github.com:[user]/[repository].git # e.g. git clone git@github.com:spiderwebrobot/git-started.git
    ```
-2. Navigate into the repository
+3. Navigate into the repository
    ```sh
    cd [repository] # e.g. cd git-started
    ```
-3. Specify `push` and `pull` behaviors
+4. Specify `push` and `pull` behaviors
    ```sh
    git config pull.rebase false && git config push.default current
    ```
-4. Establish your identity
+5. Establish your identity
    ```sh
    git config user.name "Your Name" && git config user.email your@address.com
    ```
@@ -91,17 +93,16 @@
 
 ### Add and commit feature-branch changes
 
-1. Make changes to the feature-branch
-2. Open a terminal
-3. Make sure the correct feature-branch is checked out
+1. Open a terminal
+2. Make sure the correct feature-branch is checked out
    ```sh
    git branch
    ```
-4. Review the files that were changed/added/removed
+3. Review the files that were changed/added/removed
    ```sh
    git status -su
    ```
-5. Add and commit the feature-branch changes
+4. Add and commit the feature-branch changes
    ```sh
    git add . && git commit
    ```
@@ -134,7 +135,7 @@
 3. On the "Your branches" page, click on the "New pull request" button for the feature-branch
 4. On the "Open a pull request" page, click on the "Create pull request" button
 
-## Deploy the feature-branch changes
+## Deployment
 
 1. Open a browser
 2. Navigate to the "Pull requests" page, e.g. `https://github.com/spiderwebrobot/git-started/pulls`
