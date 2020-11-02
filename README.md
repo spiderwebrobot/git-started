@@ -58,92 +58,83 @@
 
 ### Clone and configure the repository
 
-Open a terminal and...
-
-```sh
-git clone git@github.com:[user]/[repository].git # e.g. git clone git@github.com:spiderwebrobot/git-started.git
-```
-
-Navigate into the repository
-
-```sh
-cd [repository] # e.g. cd git-started
-```
-
-Specify how to reconcile divergent branches
-
-```sh
-git config pull.rebase false
-```
-
-Push the current branch to update a branch with the same name
-
-```sh
-git config push.default current
-```
-
-Establish your identity
-
-```sh
-git config user.name "Your Name" && git config user.email your@address.com
-```
+1. Open a terminal and...
+   ```sh
+   git clone git@github.com:[user]/[repository].git # e.g. git clone git@github.com:spiderwebrobot/git-started.git
+   ```
+2. Navigate into the repository
+   ```sh
+   cd [repository] # e.g. cd git-started
+   ```
+3. Specify `push` and `pull` behaviors
+   ```sh
+   git config pull.rebase false && git config push.default current
+   ```
+4. Establish your identity
+   ```sh
+   git config user.name "Your Name" && git config user.email your@address.com
+   ```
 
 ## Workflow
 
 ### Create a feature-branch
 
-Open a terminal and...
+1. Open a terminal
+2. Checkout the main-branch and pull in the latest changes
+   ```sh
+   git checkout main && git pull
+   ```
+3. Create and switch to a feature-branch
+   ```sh
+   git checkout -b feature/initial-updates
+   ```
 
-```sh
-git checkout main && git pull
-```
+### Add and commit feature-branch changes
 
-Create and switch to a feature-branch
-
-```sh
-git checkout -b feature/initial-updates
-```
-
-Open a code-editor and make changes to the feature-branch
-
-### Add and commit the feature-branch changes
-
-```sh
-git add . && git commit
-```
+1. Make changes to the feature-branch
+2. Open a terminal
+3. Make sure the correct feature-branch is checked out
+   ```sh
+   git branch
+   ```
+4. Review the files that were changed/added/removed
+   ```sh
+   git status -su
+   ```
+5. Add and commit the feature-branch changes
+   ```sh
+   git add . && git commit
+   ```
 
 ### Sync the feature-branch with the main-branch
 
-Open a terminal and...
+1. Open a terminal
+2. Checkout the main-branch and pull in the latest changes
+   ```sh
+   git checkout main && git pull
+   ```
+3. Switch to the feature-branch and merge in the changes from the main-branch
+   ```sh
+   git checkout feature/initial-updates && git merge main
+   ```
 
-```sh
-git checkout main && git pull
-```
-
-Switch to the feature-branch, and merge changes from the main-branch
-
-```sh
-git checkout feature/initial-updates && git merge main
-```
-
-### Create pull-request for the feature-branch
-
-Push the feature-branch changes
+### Push the feature-branch
 
 1. Open a terminal
 2. Make sure the feature-branch changes are in sync with the main-branch (see instructions above)
-3. Push the feature-branch `git push`
+3. Push the feature-branch
+   ```sh
+   git push
+   ```
 
-After pushing the feature-branch...
+### Create a pull-request
 
 1. Open a browser
 2. Navigate to the "Your branches" page, e.g. `https://github.com/spiderwebrobot/git-started/branches/yours`
-3. On the "Your branches" page, click on the respective "New pull request" button
+3. On the "Your branches" page, click on the "New pull request" button for the feature-branch
 4. On the "Open a pull request" page, click on the "Create pull request" button
 
-### Deploy the feature-branch changes
-
-Merge the feature-branch changes into the main-branch
+## Deploy the feature-branch changes
 
 1. Open a browser
 2. Navigate to the "Pull requests" page, e.g. `https://github.com/spiderwebrobot/git-started/pulls`
