@@ -9,44 +9,33 @@
 
 ### Set up SSH keys
 
-Open a terminal and...
-
-```sh
-ssh-keygen -t rsa -b 4096 -C "your_github_email@address.com"
-```
-
-Start the ssh-agent in the background (which will generate an agent process ID, e.g. `Agent pid 10164`)
-
-```sh
-eval "$(ssh-agent -s)"
-```
-
-Create an SSH config file
-
-```sh
-touch ~/.ssh/config
-```
-
-Edit the SSH config file
-
-```
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa
-```
-
-Add the SSH private key to the ssh-agent, and store the passphrase in the keychain
-
-```sh
-ssh-add -K ~/.ssh/id_rsa
-```
-
-Stop the ssh-agent in the background
-
-```sh
-kill 10164 # or whatever `Agent pid` that was generated
-```
+1. Open a terminal and create a new authentication key pair, e.g...
+   ```sh
+   ssh-keygen -t rsa -b 4096 -C "your_github_email@address.com"
+   ```
+2. Start the ssh-agent in the background (which will generate a process ID, e.g. `Agent pid 10164`)
+   ```sh
+   eval "$(ssh-agent -s)"
+   ```
+3. Create an SSH config file
+   ```sh
+   touch ~/.ssh/config
+   ```
+4. Edit the SSH config file
+   ```
+   Host *
+     AddKeysToAgent yes
+     UseKeychain yes
+     IdentityFile ~/.ssh/id_rsa
+   ```
+5. Add the SSH private key to the ssh-agent, and store the passphrase in the keychain
+   ```sh
+   ssh-add -K ~/.ssh/id_rsa
+   ```
+6. Stop the ssh-agent in the background
+   ```sh
+   kill 10164 # or whatever `Agent pid` that was generated
+   ```
 
 ### Copy SSH keys to GitHub
 
@@ -158,7 +147,7 @@ Merge the feature-branch changes into the main-branch
 
 1. Open a browser
 2. Navigate to the "Pull requests" page, e.g. `https://github.com/spiderwebrobot/git-started/pulls`
-3. TODO: something here
+3. On the "Pull requests" page, click on the feature-branch to be merged
 4. Select "Squash and merge" from the "Merge pull request" dropdown menu (if not already selected)
 5. Click on the "Squash and merge" button
 6. Click on the "Confirm squash and merge" button
@@ -166,6 +155,7 @@ Merge the feature-branch changes into the main-branch
 
 ## Resources
 
+* [Generate a New SSH Key](https://www.ssh.com/ssh/keygen/)
 * [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 * [Adding a new SSH key to your GitHub account](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 * [GitHub Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
